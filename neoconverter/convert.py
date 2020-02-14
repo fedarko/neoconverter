@@ -53,7 +53,7 @@ def convert(input_csv_for_excel_file, output_tsv_file) -> None:
        format (each row has a lat/lon coordinate and the value in that "chunk")
        which may be easier to analyze.
        
-       NOTE THAT this assumes that the rows and columns are labelled with the
+       PLEASE NOTE this assumes that the rows and columns are labelled with the
        latitude/longitude values -- this requires selecting the "CSV for Excel"
        download option from NEO's website, not the plain "CSV" option.
     """

@@ -13,6 +13,11 @@ def _read(filepath):
     # * see https://stackoverflow.com/a/35058538/10730311
     # TODO don't say header=None, should be avoidable
     data = pd.read_csv(filepath, sep=",", header=None, dtype=str)
+    if data.at[0, 0] != "lat/lon":
+        raise ValueError(
+            "Looks like this file isn't formatted as expected: there isn't "
+            "the text 'lat/lon' present in the top-left cell."
+        )
     # now that the data is loaded in as strings (not numbers), we can set the
     # index/header correctly
     # set index from first column
