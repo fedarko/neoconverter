@@ -11,20 +11,21 @@ def _convert_one_file(filepath):
     value = []
     # Go through the rows (each representing a latitude)
     for lat, row in data.iterrows():
-      # Go through the cols (each representing a longitude)
-      for lon, val in row.iteritems():
-        lat_lon.append("{},{}".format(lat, lon))
-        value.append(val)
-  
+        # Go through the cols (each representing a longitude)
+        for lon, val in row.iteritems():
+            lat_lon.append("{},{}".format(lat, lon))
+            value.append(val)
+
     new_data = pd.Series(value, index=lat_lon)
     new_df = pd.DataFrame(data=new_data, columns=["Values"])
     new_df.index.name = "lat_lon"
     return new_df
-  
+
     # As a sanity check, the MY1DMM_CHLORA_2016-01-01_rgb_3600x1800.SS.CSV file
     # from NOAA has a value of "0.0393" at row 1125, column RN (or latitude
     # ~ -22.35000000, longitude -131.95). From testing this code on that file,
     # this value is set in the output data correctly.
+
 
 @click.command()
 @click.option(
@@ -52,16 +53,15 @@ def convert(input_csv_for_excel_file, output_tsv_file) -> None:
        The output file produced from this is in a much simpler two-column
        format (each row has a lat/lon coordinate and the value in that "chunk")
        which may be easier to analyze.
-       
+
        PLEASE NOTE this assumes that the rows and columns are labelled with the
        latitude/longitude values -- this requires selecting the "CSV for Excel"
        download option from NEO's website, not the plain "CSV" option.
     """
 
     converted_df = _convert_one_file(input_csv_for_excel_file)
-    converted_df.to_csv(
-        output_file_name, header=True, index=True, sep="\t"
-    )
+    converted_df.to_csv(output_tsv_file, header=True, index=True, sep="\t")
+
 
 if __name__ == "__main__":
     convert()

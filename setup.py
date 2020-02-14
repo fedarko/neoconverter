@@ -45,9 +45,7 @@ setup(
     },
     classifiers=classifiers,
     entry_points={
-        "console_scripts": [
-            "convert-neo-excel=neoconverter.convert:convert",
-        ],
+        "console_scripts": ["convert-neo-excel=neoconverter.convert:convert"]
     },
     zip_safe=False,
     python_requires=">=3.5",
