@@ -22,7 +22,6 @@ Per NEO ([source](https://neo.sci.gsfc.nasa.gov/blog/2013/12/23/csv-and-floating
 
 - Add back functionality that takes in a list of files and converts all of them
   at once
-- Add more comprehensive tests (testing bad inputs in `_read()`, testing the
-  convert function(s) actually read things correctly, etc.)
-    - can use StringIOs to mock up the CSV files
+- Add more comprehensive tests (testing the convert function(s) actually do
+  things correctly, that values are being read properly, etc.)
 - Add more documentation, examples, etc.
