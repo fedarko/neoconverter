@@ -20,7 +20,7 @@ Per NEO ([source](https://neo.sci.gsfc.nasa.gov/blog/2013/12/23/csv-and-floating
 
 ## Installation and command-line usage
 
-```
+```bash
 # Install the python package
 $ pip install git+https://github.com/fedarko/neoconverter.git
 $ convert-neo-excel --help
