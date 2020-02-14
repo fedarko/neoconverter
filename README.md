@@ -1,4 +1,4 @@
-# neo-csv-for-excel-parser
+# neoconverter
 
 Converts "CSV for Excel" data files obtained from the
 [NASA Earth Observations website](https://neo.sci.gsfc.nasa.gov/) from the
