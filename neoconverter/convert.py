@@ -21,6 +21,7 @@ def _convert_one_file(filepath):
     new_df.index.name = "lat_lon"
     return new_df
 
+
 @click.command()
 @click.option(
     "-i",
