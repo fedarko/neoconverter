@@ -21,12 +21,6 @@ def _convert_one_file(filepath):
     new_df.index.name = "lat_lon"
     return new_df
 
-    # As a sanity check, the MY1DMM_CHLORA_2016-01-01_rgb_3600x1800.SS.CSV file
-    # from NOAA has a value of "0.0393" at row 1125, column RN (or latitude
-    # ~ -22.35000000, longitude -131.95). From testing this code on that file,
-    # this value is set in the output data correctly.
-
-
 @click.command()
 @click.option(
     "-i",
