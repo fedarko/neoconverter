@@ -18,10 +18,43 @@ Per NEO ([source](https://neo.sci.gsfc.nasa.gov/blog/2013/12/23/csv-and-floating
 > recommend that you use the original source data (which are not hosted by NEO,
 > but we can assist you in identifying the source).
 
+## Installation and command-line usage
+
+```
+# Install the python package
+$ pip install git+https://github.com/fedarko/neoconverter.git
+$ convert-neo-excel --help
+Usage: convert-neo-excel [OPTIONS]
+
+  Converts a geographically formatted CSV file to a two-column format.
+
+  In particular, this assumes that the rows correspond to "chunks" of
+  latitudes and the columns correspond to "chunks" of longitudes, and that
+  the cell values correspond to some variable of interest within that
+  latitude/longitude area.
+
+  The output file produced from this is in a much simpler two-column format
+  (each row has a lat/lon coordinate and the value in that "chunk") which
+  may be easier to analyze.
+
+  PLEASE NOTE this assumes that the rows and columns are labelled with the
+  latitude/longitude values -- this requires selecting the "CSV for Excel"
+  download option from NEO's website, not the plain "CSV" option.
+
+Options:
+  -i, --input-csv-for-excel-file TEXT
+                                  Input 'CSV for Excel' filepath.  [required]
+  -o, --output-tsv-file TEXT      Output TSV filepath.  [required]
+  --help                          Show this message and exit.
+```
+
+## Running tests
+
+You can just run `make test` in the root of the repository. The tests are
+really unoptimized, so this will take a few minutes (PRs welcome).
+
 ## TODOs for this repo
 
 - Add back functionality that takes in a list of files and converts all of them
   at once
-- Add more comprehensive tests (testing the convert function(s) actually do
-  things correctly, that values are being read properly, etc.)
 - Add more documentation, examples, etc.

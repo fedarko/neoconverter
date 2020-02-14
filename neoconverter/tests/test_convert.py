@@ -15,7 +15,7 @@ def test_convert_easy():
     # one-dimensionally
     assert len(twocoldf.index) == (3600 * 1800)
     assert twocoldf.columns == ["Values"]
-    
+
     our_df = pd.read_csv(fp, sep=",", dtype=str)
     our_df.set_index(our_df.columns[0], inplace=True)
 
