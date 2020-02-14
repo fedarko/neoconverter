@@ -17,3 +17,12 @@ Per NEO ([source](https://neo.sci.gsfc.nasa.gov/blog/2013/12/23/csv-and-floating
 > detection but if you are interested in conducting research-level science we
 > recommend that you use the original source data (which are not hosted by NEO,
 > but we can assist you in identifying the source).
+
+## TODOs for this repo
+
+- Add back functionality that takes in a list of files and converts all of them
+  at once
+- Add more comprehensive tests (testing bad inputs in `_read()`, testing the
+  convert function(s) actually read things correctly, etc.)
+    - can use StringIOs to mock up the CSV files
+- Add more documentation, examples, etc.
