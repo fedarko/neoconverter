@@ -58,3 +58,5 @@ really unoptimized, so this will take a few minutes (PRs welcome).
 - Add back functionality that takes in a list of files and converts all of them
   at once
 - Add more documentation, examples, etc.
+- Travis/CodeCov integration
+- Supporting more types of NEO input files?
