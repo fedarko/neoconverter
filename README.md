@@ -60,3 +60,8 @@ really unoptimized, so this will take a few minutes (PRs welcome).
 - Add more documentation, examples, etc.
 - Travis/CodeCov integration
 - Supporting more types of NEO input files?
+
+## Acknowledgements
+This code was developed in conjunction with Justin Shaffer ([@justinshaffer](https://github.com/justinshaffer)).
+
+The test data file contained in this repository (in `neoconverter/tests/inputs/MY1DMM_CHLORA_2016-01-01_rgb_3600x1800.SS.CSV`) was obtained from the [NEO's website](https://neo.sci.gsfc.nasa.gov/view.php?datasetId=MY1DMM_CHLORA&year=2016), and contains observed measurements of Chlorophyll concentrations in January 2016 with "0.1 degrees" granularity.
